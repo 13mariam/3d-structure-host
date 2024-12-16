@@ -1,7 +1,7 @@
-<DOCTYPE html!>
-<html lang="en">
+<DOCTYPE html !>
+<"html lang="en>
 <head>
-     <meta charset="UTF-8">
+    <"meta charset="UTF-8>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3D Structure Viewer</title>
     <script src="https://cdn.jsdelivr.net/npm/ngl@2.0.0/dist/ngl.js"></script>
@@ -13,6 +13,8 @@
         stage.loadFile("coords.pdb").then(function (o) {
             o.addRepresentation("cartoon");
             stage.autoView();
+        }).catch(function (err) {
+            console.error("Error loading PDB file:", err);
         });
     </script>
 </body>
